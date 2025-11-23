@@ -1,0 +1,180 @@
+/* RESET (Removes default browser spacing) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* We will fix fonts later */
+    background-color: #0b0c10; /* Dark Black */
+    color: #c5c6c7; /* Light Grey Text */
+    text-align: center;
+}
+
+/* Make the logo big and white */
+.logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px;
+}
+
+/* The MINING FIX - Stable Image, Correct Gradient */
+.hero {
+    /* 1. The Image Background: A dark, industrial machine/tunnel image */
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), /* 70% black overlay (was 80%) */
+        url('https://images.unsplash.com/photo-1581093557224-b108643808a3?q=80&w=1920&auto=format&fit=crop'); 
+        /* Image URL of a worker in a dark factory/tunnel */
+
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* 2. The Layout Engine (Flexbox) */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    
+    /* 3. The Centering Engine */
+  display: flex;
+    flex-direction: column; /* Stack items vertically (Title above Text) */
+    justify-content: center; /* Center Vertically */
+    align-items: center;     /* Center Horizontally */
+    text-align: center;      /* Force the TEXT itself to be centered */
+}
+
+/* Ensure the inner content box doesn't stretch too wide */
+.hero-content {
+    max-width: 800px; /* Keeps the text from hitting the edges */
+    padding: 20px;
+    text-align: center;
+}
+
+/* The Text Size */
+.hero h1 {
+    font-size: 60px;
+    letter-spacing: 5px; /* Makes it look "Techy" */
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* The Grid Container */
+.specs {
+    padding: 100px 50px; /* Spacing top/bottom, left/right */
+    
+    /* THE GRID MAGIC */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 30px; /* Space between cards */
+}
+
+/* The Card Style */
+.card {
+    background-color: #1f2833; /* Slightly lighter dark grey */
+    padding: 40px;
+    border: 1px solid #45a29e; /* Cyan Border */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+/* Hover Effect (The "Pro" Touch) */
+.card:hover {
+    transform: translateY(-10px); /* Move up when hovered */
+    box-shadow: 0 10px 20px rgba(102, 252, 241, 0.2); /* Glowing shadow */
+}
+.hero h1 {
+    font-family: 'Rajdhani', sans-serif; /* The robot font */
+    font-size: 80px; /* Massive size */
+    font-weight: 700; /* Bold */
+    color: #fff;
+    text-transform: uppercase; /* Forces CAPS even if you typed lowercase */
+    letter-spacing: 10px; /* Spreads letters apart for a cinematic look */
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8); /* Black shadow to read text over image */
+    text-align: center;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px; /* Prevents text from stretching too wide */
+    line-height: 1.6;
+    margin-bottom: 30px; /* Push the button down */
+    text-align: center;
+}
+button {
+    padding: 15px 50px; /* Big click area */
+    background-color: transparent; /* See-through */
+    border: 2px solid #66fcf1; /* Electric Blue Border */
+    color: #66fcf1; /* Electric Blue Text */
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer; /* Changes mouse cursor to hand */
+    transition: all 0.3s ease; /* Animates the change over 0.3 seconds */
+}
+
+/* THE HOVER STATE (What happens when you touch it) */
+button:hover {
+    background-color: #66fcf1; /* Fill with blue */
+    color: #0b0c10; /* Text turns black */
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.6); /* Glowing neon effect */
+    transform: scale(1.05); /* Grows slightly larger */
+}
+footer {
+    background-color: #000; /* Pure black */
+    color: #45a29e; /* Dull Teal text */
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #1f2833; /* A subtle line separating it from the grid */
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+nav {
+    display: flex; /* Turn on the layout engine */
+    justify-content: space-between; /* Push Logo to Left, Links to Right */
+    align-items: center; /* Align them vertically in the middle */
+    padding: 20px 50px; /* Give them breathing room */
+    
+    /* Make it sit transparently ON TOP of the image */
+    position: absolute; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Force it to be the top layer */
+}
+
+/* Style the Links */
+.nav-links a {
+    color: #fff;
+    text-decoration: none; /* Remove underline */
+    margin-left: 30px; /* Space between links */
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #66fcf1; /* Electric Blue on hover */
+}
+
+/* Ensure the text inside the cards is centered */
+.card {
+    background-color: #1f2833;
+    padding: 40px;
+    border: 1px solid #45a29e;
+    /* THIS IS THE KEY LINE: */
+    text-align: center; 
+    /* -------------------- */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
