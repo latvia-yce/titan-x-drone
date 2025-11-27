@@ -107,8 +107,7 @@ body {
     line-height: 1.6;
     margin-bottom: 30px; /* Push the button down */
     text-align: center;
-    margin-left: center;
-    margin-right: center;
+    margin: 0 auto 30px;
 }
 button {
     padding: 15px 50px; /* Big click area */
