@@ -89,19 +89,11 @@ body {
     transform: translateY(-10px); /* Move up when hovered */
     box-shadow: 0 10px 20px rgba(102, 252, 241, 0.2); /* Glowing shadow */
 }
-.hero h1 {
-    font-family: 'Rajdhani', sans-serif; /* The robot font */
-    font-size: 80px; /* Massive size */
-    font-weight: 700; /* Bold */
-    color: #fff;
-    text-transform: uppercase; /* Forces CAPS even if you typed lowercase */
-    letter-spacing: 10px; /* Spreads letters apart for a cinematic look */
-    margin-bottom: 10px;
-    text-shadow: 0 0 20px rgba(0,0,0,0.8); /* Black shadow to read text over image */
-    text-align: center;
-}
-    /* 1. The Parent Container (The Engine) */
+/* --- HERO SECTION START --- */
+
+/* 1. The Parent Container (The Layout Engine) */
 .hero {
+    /* Background Image setup */
     background-image: 
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
         url('https://images.unsplash.com/photo-1581093557224-b108643808a3?q=80&w=1920&auto=format&fit=crop');
@@ -109,40 +101,62 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     
+    /* Full Screen Size */
     height: 100vh;
     width: 100%;
     
-    /* FLEXBOX CENTERING MAGIC (Must be here!) */
-    display: flex;
-    flex-direction: column; /* Stacks title, text, button vertically */
-    justify-content: center; /* Centers vertically */
-    align-items: center;     /* Centers horizontally */
-    text-align: center;      /* Centers text inside child elements */
+    /* FLEXBOX CENTERING (The Critical Part) */
+    display: flex;          /* Turns on the engine */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center;/* Centers vertically (up/down) */
+    align-items: center;    /* Centers horizontally (left/right) */
+    text-align: center;     /* Centers text inside the boxes */
 }
 
-/* 2. The Paragraph (The Child) */
+/* 2. The Main Title */
+.hero h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+    /* No margins needed here because .hero aligns it */
+}
+
+/* 3. The Paragraph Text */
 .hero p {
     font-size: 20px;
-    max-width: 600px;  /* Stops text from getting too wide */
+    color: #c5c6c7;
+    max-width: 600px; /* Limits width so lines break nicely */
     line-height: 1.6;
     margin-bottom: 30px;
-    
-    /* No margins needed because the parent .hero does the work! */
-    margin-left: 0;
-    margin-right: 0;
+    /* No margins needed here because .hero aligns it */
 }
+
+/* 4. The Button */
 button {
-    padding: 15px 50px; /* Big click area */
-    background-color: transparent; /* See-through */
-    border: 2px solid #66fcf1; /* Electric Blue Border */
-    color: #66fcf1; /* Electric Blue Text */
+    padding: 15px 50px;
+    background-color: transparent;
+    border: 2px solid #66fcf1;
+    color: #66fcf1;
     font-family: 'Rajdhani', sans-serif;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
-    cursor: pointer; /* Changes mouse cursor to hand */
-    transition: all 0.3s ease; /* Animates the change over 0.3 seconds */
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+button:hover {
+    background-color: #66fcf1;
+    color: #0b0c10;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.6);
+    transform: scale(1.05);
+}
+/* --- HERO SECTION END --- */
 
 /* THE HOVER STATE (What happens when you touch it) */
 button:hover {
