@@ -106,8 +106,12 @@ body {
     max-width: 600px; /* Prevents text from stretching too wide */
     line-height: 1.6;
     margin-bottom: 30px; /* Push the button down */
-    text-align: center;
-    margin: 0 auto 30px;
+    /* ... other styles ... */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* <<< THIS centers all the children (h1, p, button) horizontally */
+    /* ... */
+
 }
 button {
     padding: 15px 50px; /* Big click area */
