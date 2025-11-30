@@ -134,6 +134,8 @@ body {
     line-height: 1.6;
     margin-bottom: 30px;
     /* No margins needed here because .hero aligns it */
+    /* ADD THIS LINE TO CENTER THE WORDS INSIDE THE 600px BOX */
+    text-align: center;
 }
 
 /* 4. The Button */
