@@ -130,7 +130,7 @@ body {
 .hero p {
     font-size: 20px;
     color: #c5c6c7;
-    max-width: 600px; /* Limits width so lines break nicely */
+    max-width: 400px; /* Limits width so lines break nicely */
     line-height: 1.6;
     margin-bottom: 30px;
     /* No margins needed here because .hero aligns it */
