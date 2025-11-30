@@ -33,7 +33,7 @@ body {
     background-repeat: no-repeat;
     
     /* 2. The Layout Engine (Flexbox) */
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,6 +55,12 @@ body {
     max-width: 800px; /* Keeps the text from hitting the edges */
     padding: 20px;
     text-align: center;
+    /* Ensure the inner content is centered both horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 /* The Text Size */
@@ -72,6 +78,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
     gap: 30px; /* Space between cards */
+    /* Keep the grid centered on wide screens */
+    max-width: 1200px;
+    margin: 40px auto 20px; /* Add a small spacing below the paragraph */
+        /* Reset bottom spacing to 0 since we are directly spacing the hero paragraph instead */
+        margin: 40px auto 0; /* Center the grid and keep top spacing */
 }
 
 /* The Card Style */
@@ -102,7 +113,7 @@ body {
     background-repeat: no-repeat;
     
     /* Full Screen Size */
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     
     /* FLEXBOX CENTERING (The Critical Part) */
@@ -111,6 +122,7 @@ body {
     justify-content: center;/* Centers vertically (up/down) */
     align-items: center;    /* Centers horizontally (left/right) */
     text-align: center;     /* Centers text inside the boxes */
+    padding-bottom: 60px; /* Add breathing room inside the hero */
 }
 
 /* 2. The Main Title */
@@ -132,10 +144,10 @@ body {
     color: #c5c6c7;
     max-width: 600px; /* Limits width so lines break nicely */
     line-height: 1.6;
-    margin: 0 auto;
+    margin: 40px auto 20px; /* Top 40, side auto, bottom 20 for gap below paragraph */
     /* No margins needed here because .hero aligns it */
     /* ADD THIS LINE TO CENTER THE WORDS INSIDE THE 600px BOX */
-    text-align: center !important;
+    text-align: center;
 }
 
 /* 4. The Button */
@@ -150,6 +162,7 @@ button {
     letter-spacing: 2px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 12px; /* Keep space between paragraph and button */
 }
 
 button:hover {
@@ -216,4 +229,11 @@ nav {
     /* -------------------- */
     border-radius: 10px;
     transition: transform 0.3s ease;
+}
+
+/* Ensure paragraph text inside cards is centered */
+.card p {
+    text-align: center;
+    margin: 10px 0 0;
+    width: 100%;
 }
