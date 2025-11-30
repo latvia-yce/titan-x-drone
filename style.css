@@ -130,9 +130,9 @@ body {
 .hero p {
     font-size: 20px;
     color: #c5c6c7;
-    max-width: 800px; /* Limits width so lines break nicely */
+    max-width: 600px; /* Limits width so lines break nicely */
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 0 auto;
     /* No margins needed here because .hero aligns it */
     /* ADD THIS LINE TO CENTER THE WORDS INSIDE THE 600px BOX */
     text-align: center !important;
